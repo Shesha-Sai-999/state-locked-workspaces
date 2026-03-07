@@ -79,7 +79,7 @@ Terraform Root
 
 ---
 
-# ◈ Project Structure
+## ◈ Project Structure
 ```text
 MULTI-ENV-PROJ
 │
@@ -121,7 +121,7 @@ MULTI-ENV-PROJ
 
 ---
 
-# ◈ Environments
+## ◈ Environments
 
 This project supports multiple infrastructure environments.
 
@@ -143,7 +143,7 @@ Runs modules:
 
 ---
 
-## Production Environment
+### Production Environment
 
 Path: environments/prod
 
@@ -162,13 +162,13 @@ This environment typically contains stricter configurations such as:
 
 ---
 
-# ◈ Terraform Modules
+## ◈ Terraform Modules
 
 Modules provide **reusable infrastructure components**.
 
 ---
 
-## 🔸 Networking Module
+### 🔸 Networking Module
 
 Path: modules/networking
 
@@ -204,7 +204,7 @@ Example variables:
 
 ---
 
-## 🔸 Web Server Module
+### 🔸 Web Server Module
 
 Path: modules/web-server
 
@@ -236,13 +236,13 @@ Creates an **EC2 instance inside the VPC**.
 
 ---
 
-# ◈  Remote State Management
+## ◈  Remote State Management
 
 Terraform state is stored remotely to allow **team collaboration and safe infrastructure updates**.
 
 ---
 
-## S3 Backend
+### S3 Backend
 
 The Terraform state file is stored in an **AWS S3 bucket**.
 
@@ -265,7 +265,7 @@ terraform {
 }
 ```
 
-## DynamoDB State Locking
+### DynamoDB State Locking
 
 A DynamoDB table is used to prevent multiple users from modifying Terraform state simultaneously.
 
@@ -290,7 +290,7 @@ resource "aws_s3_bucket" "prj1-terra" {
 }
 ```
 
-# ◈ Prerequisites
+## ◈ Prerequisites
 
 Before using this project, ensure the following tools are installed:
 
@@ -302,7 +302,7 @@ Terraform |	>= 1.0
 AWS CLI	| Latest
 Git	| Latest
 
-# ◈  AWS Configuration
+## ◈  AWS Configuration
 
 Configure AWS credentials before running Terraform.
 ```
@@ -316,14 +316,14 @@ Region
 Output format
 ```
 
-# ◈  Deployment Guide
-## 🔸 Clone the Repository
+## ◈  Deployment Guide
+### 🔸 Clone the Repository
 
 ```
 git clone https://github.com/Shesha-Sai-999/state-locked-workspaces.git
 cd state-locked-workspaces
 ```
-## 🔸 Deploy State Locking Infrastructure
+### 🔸 Deploy State Locking Infrastructure
 
 Navigate to the global state locking directory, Initialize and run Terraform:
 ```bash
@@ -338,7 +338,7 @@ This will create:
 
 - DynamoDB locking table
 
-## 🔸 Deploy Development Environment
+### 🔸 Deploy Development Environment
 
 Navigate to dev environment and launch the environment:
 ```bash
@@ -348,7 +348,7 @@ terraform init
 terraform plan
 terraform apply
 ```
-# Example Deployment Workflow
+## Example Deployment Workflow
 ```text
 Step 1: Deploy global infrastructure
                 ↓
@@ -364,7 +364,7 @@ Step 2: Deploy environment
 ```        
 
 
-# ◈ Future Improvements
+## ◈ Future Improvements
 
 Possible enhancements:
 
@@ -380,7 +380,7 @@ Possible enhancements:
 
 - Add Security hardening
 
-# ◈ Contributing
+## ◈ Contributing
 
 Contributions are welcome.
 
@@ -394,10 +394,10 @@ Steps:
 
 - Submit a pull request
 
-# ◈ License
+## ◈ License
 
 This project is licensed under the Apache-2.0 License.
 
-# ◈ Author
+## ◈ Author
 
 Shesha Sai Geethri
